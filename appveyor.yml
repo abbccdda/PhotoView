@@ -9,7 +9,7 @@ install:
   # - cmd: cd C:\projects\photoview\
   # - md C:\Program^ Files^ (x86)\Android\android-sdk\licenses
   - echo y | "%ANDROID_HOME%\tools\android.bat" list sdk
-  - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a tools
+  - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t tools
   # - start sample.bat  start /b sample.bat
   - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk --no-ui --all --filter android-25
    # < echo y.txt |grep 'package installed'
