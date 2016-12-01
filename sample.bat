@@ -1,4 +1,4 @@
 FOR /L %%A IN (1,1,200) DO (
   ECHO y
-  timeout 1
+  timeout 0.5
 )
