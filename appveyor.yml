@@ -2,21 +2,18 @@ environment:
   ANDROID_HOME: C:\Program Files (x86)\Android\android-sdk
 
 install:
-  # - ps: Start-FileDownload 'https://dl.google.com/android/android-sdk_r24.4.1-windows.zip'
-  # - echo y | 7z x android-sdk_r24.4.1-windows.zip -o"%ANDROID_HOME%" 
-  - cmd: cd C:\Program^ Files^ (x86)\Android\android-sdk
-  - cmd: md licenses
-  - cmd: cd C:\projects\photoview\
+  - ps: Start-FileDownload 'http://dl.google.com/android/repository/tools_r25.2.2-windows.zip'
+  - echo y | 7z x android-sdk_r25.5.2-windows.zip -o"%ANDROID_HOME%" 
+  # - cmd: cd C:\Program^ Files^ (x86)\Android\android-sdk
+  # - cmd: md licenses
+  # - cmd: cd C:\projects\photoview\
   # - md C:\Program^ Files^ (x86)\Android\android-sdk\licenses
-  - dir "%ANDROID_HOME%"
-  - copy ".\LICENSE" "%ANDROID_HOME%\licenses\LICENSE"
   # - echo y | "%ANDROID_HOME%\tools\android.bat" list sdk
   # - start sample.bat  start /b sample.bat
-  - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk --no-ui --all
   - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk --no-ui --all --filter android-25
    # < echo y.txt |grep 'package installed'
-  # - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t tools, build-tools-25.0.0
-  # - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t platform-tools, extra-android-m2repository
+  - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t tools, build-tools-25.0.0
+  - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t platform-tools, extra-android-m2repository
 
 test_script:
   - gradlew.bat build
