@@ -4,9 +4,7 @@ environment:
 install:
   # - dir C:\Program Files (x86)\Android\android-sdk
   # - echo y | "%ANDROID_HOME%\tools\android.bat" --silent update sdk --no-ui --all --filter android-25
-  - cmd: cd C:\Program^ Files^ (x86)\
-  - cmd: dir
-  - cmd: dir %ANDROID_HOME%
+  - cmd: dir C:\Program^ Files^ (x86)\Android\android-sdk
   # - echo y | "%ANDROID_HOME%\tools\android.bat" --silent update sdk --no-ui --all
   # - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t tools, build-tools-25.0.0
   # - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t platform-tools, extra-android-m2repository
