@@ -7,7 +7,8 @@ install:
   # - cmd: cd C:\Program^ Files^ (x86)\Android\android-sdk
   # - cmd: dir
   - echo y | "%ANDROID_HOME%\tools\android.bat" list sdk
-  - for /l %%x in (1, 1, 100) do (echo y; timeout 4) | "%ANDROID_HOME%\tools\android.bat" update sdk --no-ui --all --filter android-25 | grep 'package installed'
+  - sample.bat 
+  - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk --no-ui --all --filter android-25 | grep 'package installed'
   # - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t tools, build-tools-25.0.0
   # - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t platform-tools, extra-android-m2repository
 
