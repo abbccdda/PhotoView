@@ -8,11 +8,12 @@ install:
   # - cmd: md licenses
   # - cmd: cd C:\projects\photoview\
   # - md C:\Program^ Files^ (x86)\Android\android-sdk\licenses
-  - echo y | "%ANDROID_HOME%\tools\android.bat" list sdk
-  - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t tools
+
   # - start sample.bat  start /b sample.bat
+  # < echo y.txt |grep 'package installed'
+  - echo y | "%ANDROID_HOME%\tools\android.bat" list sdk
+  - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk --no-ui --all
   - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk --no-ui --all --filter android-25
-   # < echo y.txt |grep 'package installed'
   - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t tools, build-tools-25.0.0
   - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t platform-tools, extra-android-m2repository
 
