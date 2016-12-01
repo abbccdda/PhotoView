@@ -12,7 +12,7 @@ install:
   - copy ".\LICENSE" "%ANDROID_HOME%\licenses\LICENSE"
   # - echo y | "%ANDROID_HOME%\tools\android.bat" list sdk
   # - start sample.bat  start /b sample.bat
-  - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk --no-ui --all --filter android-25
+  - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk --no-ui --all android-25
    # < echo y.txt |grep 'package installed'
   # - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t tools, build-tools-25.0.0
   # - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk -u -a -t platform-tools, extra-android-m2repository
