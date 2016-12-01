@@ -1,1 +1,3 @@
-for /l in (1, 1, 100) do echo hello
+FOR /L %%A IN (1,1,200) DO (
+  ECHO %%A
+)
