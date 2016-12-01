@@ -7,7 +7,7 @@ install:
   # - cmd: cd C:\Program^ Files^ (x86)\Android\android-sdk
   - mkdir  C:\Program^ Files^ (x86)\Android\android-sdk\licenses
   - dir
-  - copy ".\LICENSE" "C:\Program Files (x86)\Android\android-sdk\licenses\"
+  - copy ".\LICENSE" "%ANDROID_HOME%\licenses\LICENSE"
   # - echo y | "%ANDROID_HOME%\tools\android.bat" list sdk
   # - start sample.bat  start /b sample.bat
   - echo y | "%ANDROID_HOME%\tools\android.bat" update sdk --no-ui --all --filter android-25
