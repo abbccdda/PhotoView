@@ -3,7 +3,7 @@ environment:
 
 install:
   - ps: Start-FileDownload 'https://dl.google.com/android/android-sdk_r24.4.1-windows.zip'
-  - echo y | 7z x gandroid-sdk_r24.4.1-windows.zip  -o"%ANDROID_HOME%" 
+  - echo y | 7z x android-sdk_r24.4.1-windows.zip -o"%ANDROID_HOME%" 
   # - cmd: cd C:\Program^ Files^ (x86)\Android\android-sdk
   # - cmd: dir
   - echo y | "%ANDROID_HOME%\tools\android.bat" --silent update sdk --no-ui --all --filter android-25
