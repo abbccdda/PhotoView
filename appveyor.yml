@@ -3,7 +3,7 @@ environment:
 
 install:
   - ps: Start-FileDownload 'http://dl.google.com/android/repository/tools_r25.2.2-windows.zip'
-  - echo y | 7z x android-sdk_r25.5.2-windows.zip -o"%ANDROID_HOME%" 
+  - echo y | 7z x android-sdk_r25.2.2-windows.zip -o"%ANDROID_HOME%" 
   # - cmd: cd C:\Program^ Files^ (x86)\Android\android-sdk
   # - cmd: md licenses
   # - cmd: cd C:\projects\photoview\
